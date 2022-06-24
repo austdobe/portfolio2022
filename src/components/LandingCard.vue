@@ -50,7 +50,7 @@ export default {
   flex-direction: column;
   text-align: left;
   width: 80%;
-  margin: 155px 0;
+  margin: 155px 30px;
 }
 
 h1 {
