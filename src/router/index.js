@@ -10,6 +10,9 @@ const router = createRouter({
       path: "/",
       name: "Landing",
       component: LandingView,
+      meta: {
+        hideNavbar: true,
+      }
     },
     {
       path: "/about",
@@ -34,6 +37,14 @@ const router = createRouter({
         const params = redirectURL.params.redirect
         location.href = `http://austindober.com/${params}`
       },
+    },
+    {
+      path: "/404",
+      component: () => import('../views/404.vue')
+    },
+    {
+      path: "/:catchAll(.*)",
+      redirect: "/404",
     },
   ],
 });

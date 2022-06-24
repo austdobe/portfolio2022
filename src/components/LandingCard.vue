@@ -1,4 +1,5 @@
 <script setup>
+import { RouterLink } from 'vue-router'
 defineProps({
   msg: {
     type: String,
@@ -13,7 +14,7 @@ defineProps({
       <h1 class="green">{{ msg }}</h1>
       <h3>
         I am Austin Dober, a Fullstack Software Engineer with the main focus of
-        clean UX/UI. Feel free to look around and see what I have to offer. If
+        clean UX/UI. Feel free to look around and get to <RouterLink to="/about">know me</RouterLink>. If
         you have any questions, or would like to work together, feel free to
         <a target="_blank" href="mailto: austin.dober@gmail.com">contact</a> me.
       </h3>
