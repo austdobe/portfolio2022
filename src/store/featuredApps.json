@@ -28,24 +28,17 @@
         "isFeatured": true
     },
     {
-        "heading": "Blackjack",
-        "image": "blackJack.jpg",
-        "description": "Rebuild of the great poker game. Custom built and designed.",
-        "redirect": "blackJack",
+        "heading": "Hang Man",
+        "image": "hangmanlogo.png",
+        "description": "Rebuild of the favored chalkboard game. Custom built and designed.",
+        "redirect": "Word-Guess-game",
         "isFeatured": false
     },
     {
-        "heading": "Blackjack",
-        "image": "blackJack.jpg",
+        "heading": "Wags with Friends",
+        "image": "wagsWithFriends.jpg",
         "description": "Rebuild of the great poker game. Custom built and designed.",
-        "redirect": "blackJack",
-        "isFeatured": false
-    }
-    ,{
-        "heading": "Blackjack",
-        "image": "blackJack.jpg",
-        "description": "Rebuild of the great poker game. Custom built and designed.",
-        "redirect": "blackJack",
+        "redirect": "wagsWithFriends",
         "isFeatured": false
     }
 ]

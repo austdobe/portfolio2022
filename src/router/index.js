@@ -21,6 +21,12 @@ const router = createRouter({
       component: () => import("../views/WorkView.vue"),
     },
     {
+      path: "/work/wagsWithFriends",
+      beforeEnter() {
+        location.href = `https://project2-10-2019.herokuapp.com/`
+      },
+    },
+    {
       path: "/work/:redirect",
       props: route => ({redirectURL: `${route.params.redirect}`}),
       beforeEnter(redirectURL) {
