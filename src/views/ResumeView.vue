@@ -2,7 +2,7 @@
 <div class="container">
     <button class="resumeAction">Download Resume</button>
     <iframe scrolling='no' class='resume' src="https://docs.google.com/document/d/e/2PACX-1vTWu3FJqjUsABl8WPokRfW7mtv-DKLWwf_bakhjh_Smo_CL6J-yFvYdydkHEpnTdGibczDJAm-xfiIM/pub?embedded=true">
-        <p>Sorry your browser doesnt have the plug in to view this. <a href="https://docs.google.com/document/d/e/2PACX-1vTWu3FJqjUsABl8WPokRfW7mtv-DKLWwf_bakhjh_Smo_CL6J-yFvYdydkHEpnTdGibczDJAm-xfiIM/pubpub">Download Here</a></p>
+        <p>Your browser doesn't support iframe. <a href="https://docs.google.com/document/d/e/2PACX-1vTWu3FJqjUsABl8WPokRfW7mtv-DKLWwf_bakhjh_Smo_CL6J-yFvYdydkHEpnTdGibczDJAm-xfiIM/pubpub">Download Here</a></p>
     </iframe>
 </div>
 </template>
@@ -10,10 +10,11 @@
 <style>
 .container {
     margin:10px auto;
-    height: 100%
+    height: 100%;
+    width: 100%;
 }
 .resume{
-    height: 2500px;
+    height: 2200px;
     width: 800px;
     margin: 20px auto;
     border: none;
@@ -24,15 +25,21 @@
     display: block;
     position: absolute;
     top:0;
-    left: 0;
+    margin: 20px auto;
     color: white;
     background: darkgray;
     padding: 10px 20px;
     border-radius: 10px;
+    z-index:2;
 
 }
 
 .resumeAction:hover{
     background-color: lightgray;
+}
+@media (max-width: 1000px) {
+    .resumeAction{
+         margin-left: 30px;
+    }
 }
 </style>
