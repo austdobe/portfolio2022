@@ -1,0 +1,3 @@
+import{_ as o,o as r,c as t,a as e}from"./index.993ddb6e.js";const s={},n={class:"container"},a=e("button",{class:"resumeAction"},"Download Resume",-1),d=e("iframe",{scrolling:"no",class:"resume",src:"https://docs.google.com/document/d/e/2PACX-1vTWu3FJqjUsABl8WPokRfW7mtv-DKLWwf_bakhjh_Smo_CL6J-yFvYdydkHEpnTdGibczDJAm-xfiIM/pub?embedded=true"},`\r
+        <p>Your browser doesn't support iframe. <a href="https://docs.google.com/document/d/e/2PACX-1vTWu3FJqjUsABl8WPokRfW7mtv-DKLWwf_bakhjh_Smo_CL6J-yFvYdydkHEpnTdGibczDJAm-xfiIM/pubpub">Download Here</a></p>\r
+    `,-1),c=[a,d];function i(m,u){return r(),t("div",n,c)}var _=o(s,[["render",i]]);export{_ as default};
