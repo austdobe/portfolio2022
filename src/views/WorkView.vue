@@ -73,4 +73,21 @@ export default {
 .toggleAction:hover {
     background: #999999;
 }
+
+@media screen and (max-width: 768px){
+    .grid{
+        grid-template-columns: 1fr 1fr;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+@media screen and (max-width: 500px){
+    .grid{
+        grid-template-columns: 1fr;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+
 </style>
