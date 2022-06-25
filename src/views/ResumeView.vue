@@ -1,8 +1,8 @@
 <template>
 <div class="container">
-    <button class="resumeAction">Download Resume</button>
+    <a href="../../public/Resume_6_22.pdf" download class="resumeAction">Download Resume</a>
     <iframe scrolling='no' class='resume' src="https://docs.google.com/document/d/e/2PACX-1vTWu3FJqjUsABl8WPokRfW7mtv-DKLWwf_bakhjh_Smo_CL6J-yFvYdydkHEpnTdGibczDJAm-xfiIM/pub?embedded=true">
-        <p>Your browser doesn't support iframe. <a href="https://docs.google.com/document/d/e/2PACX-1vTWu3FJqjUsABl8WPokRfW7mtv-DKLWwf_bakhjh_Smo_CL6J-yFvYdydkHEpnTdGibczDJAm-xfiIM/pubpub">Download Here</a></p>
+        <p>Your browser doesn't support iframe. <a href="https://docs.google.com/document/d/e/2PACX-1vTWu3FJqjUsABl8WPokRfW7mtv-DKLWwf_bakhjh_Smo_CL6J-yFvYdydkHEpnTdGibczDJAm-xfiIM/pubpub">Click here to view</a></p>
     </iframe>
 </div>
 </template>
@@ -10,6 +10,7 @@
 <style>
 .container {
     margin:10px auto;
+    min-height: 500px;
     height: 100%;
     width: 100%;
 }
@@ -31,7 +32,6 @@
     padding: 10px 20px;
     border-radius: 10px;
     z-index:2;
-
 }
 
 .resumeAction:hover{
