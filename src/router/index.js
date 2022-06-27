@@ -5,7 +5,7 @@ const url = import.meta.env.BASE_URL
 console.log(url)
 
 const router = createRouter({
-  history: createWebHistory(url),
+  history: createWebHistory('/portfolio2022/'),
   mode: 'history',
   scrollBehavior: function(to, from, savedPosition) {
     if (savedPosition) {
