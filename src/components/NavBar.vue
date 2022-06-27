@@ -25,6 +25,10 @@ nav {
   position: absolute;
   right: 0;
   margin-top: 20px;
+  margin-right: 20px;
+}
+.title {
+  margin-left: 20px;
 }
 
 nav a.router-link-exact-active {
