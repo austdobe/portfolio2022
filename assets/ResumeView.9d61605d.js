@@ -1,0 +1,3 @@
+import{_ as o}from"./plugin-vue_export-helper.21dcd24c.js";import{c as r,o as s,a as e}from"./index.56c74c63.js";const t={},a={class:"container"},d=e("a",{href:"`${base}/Resume_6_22.pdf`",download:"",class:"resumeAction"},"Download Resume",-1),n=e("iframe",{scrolling:"no",class:"resume",src:"https://docs.google.com/document/d/e/2PACX-1vTWu3FJqjUsABl8WPokRfW7mtv-DKLWwf_bakhjh_Smo_CL6J-yFvYdydkHEpnTdGibczDJAm-xfiIM/pub?embedded=true"},`\r
+        <p>Your browser doesn't support iframe. <a href="https://docs.google.com/document/d/e/2PACX-1vTWu3FJqjUsABl8WPokRfW7mtv-DKLWwf_bakhjh_Smo_CL6J-yFvYdydkHEpnTdGibczDJAm-xfiIM/pubpub">Click here to view</a></p>\r
+    `,-1),i=[d,n];function c(m,p){return s(),r("div",a,i)}var l=o(t,[["render",c]]);export{l as default};
