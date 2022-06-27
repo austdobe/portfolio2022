@@ -1,11 +1,8 @@
-import { createRouter, createWebHistory } from "vue-router";
+import { createRouter, createWebHashHistory } from "vue-router";
 import { routes } from './routes'
 
-const url = import.meta.env.BASE_URL
-console.log(url)
-
 const router = createRouter({
-  history: createWebHistory('/portfolio2022/'),
+  history: createWebHashHistory(),
   scrollBehavior: function(to, from, savedPosition) {
     if (savedPosition) {
       return savedPosition
