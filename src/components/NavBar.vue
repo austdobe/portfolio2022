@@ -28,6 +28,7 @@ nav {
   margin-right: 20px;
 }
 .title {
+  margin-top: 20px;
   margin-left: 20px;
 }
 
