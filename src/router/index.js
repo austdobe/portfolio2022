@@ -6,7 +6,6 @@ console.log(url)
 
 const router = createRouter({
   history: createWebHistory('/portfolio2022/'),
-  mode: 'history',
   scrollBehavior: function(to, from, savedPosition) {
     if (savedPosition) {
       return savedPosition
