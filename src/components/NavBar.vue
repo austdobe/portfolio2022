@@ -16,7 +16,7 @@ import { RouterLink } from "vue-router";
 nav {
   display: flex;
   width: 100%;
-  max-height: 80px;
+  height: var(--nav-height);
   font-size: 12px;
   margin: 0 30px;
   text-align: center;
@@ -24,6 +24,7 @@ nav {
 .options{
   position: absolute;
   right: 0;
+  margin-top: 20px;
 }
 
 nav a.router-link-exact-active {
@@ -48,6 +49,7 @@ nav a:first-of-type {
 @media (min-width: 1024px) {
   nav {
     text-align: left;
+    margin: 0;
     margin-left: -1rem;
     font-size: 1rem;
     padding: 1rem 0;

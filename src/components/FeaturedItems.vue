@@ -23,18 +23,19 @@ const getImageUrl = (image) => {
   return new URL(`../assets/images/${image}`, import.meta.url).href
 }
 </script>
-
+<!-- add hover effect onto the details section that shows when image is hovered on.  -->
 <template>
   <div class="item">
     <div class="imageWrapper">
+      <router-link class="cardAction" :to='{path: `/work/${redirect}`}'>
       <img :src='getImageUrl(image)' />
+      </router-link>
     </div>
     <div class="details">
       <h3>
         {{heading}}
       </h3>
       <p>{{description}}</p>
-      <router-link class="cardAction" :to='{path: `/work/${redirect}`}'>Check it out</router-link>
     </div>
     
   </div>
@@ -46,9 +47,10 @@ const getImageUrl = (image) => {
   width: 75%;
   min-height: 300px;
   display: flex;
-  border: 1px solid lightgrey;
   border-radius: 25px;
 }
+
+
 img {
   width: 100%;
   height: 100%;
@@ -61,17 +63,15 @@ img {
   top: 0;
   overflow: hidden;
 }
+.imageWrapper:hover + .details{
+  display: flex;
+}
 .cardAction{
   color: white;
-  padding: 5px 10px;
-  border: 1px solid lightgray;
-  border-radius: 10px;
   cursor: pointer;
 
 }
-.cardAction:hover {
-  background-color: #a6a6a6;
-}
+
 .details{
   background: linear-gradient(112.38deg, #a6a6a6 -36.8%, #4d4d4d 112.38%);
   color: white;
@@ -79,15 +79,15 @@ img {
   position: absolute;
   bottom: 0;
   border-radius: 0 0 25px 25px;
+  padding: 10px 20px;
   align-self: center;
   height: 50%;
   width: 100%;
+  display: none;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
 }
-h3 {
-  margin: 10px 20px; 
-}
-p{
-  margin: 10px 20px;
-}
+ 
 
 </style>

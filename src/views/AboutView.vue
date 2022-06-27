@@ -1,5 +1,20 @@
+<script setup>
+import HeroImage from '../components/HeroImage.vue';
+import Profile from '../components/Profile.vue';
+</script>
+
 <template>
-  <h1>This is an about page</h1>
+  <HeroImage 
+    msg="I BUILD FULL STACK DIGITAL ASSETS"
+  />
+  <Profile id="me" header="Austin Dober"/>
 </template>
 
-<style></style>
+<script>
+
+
+</script>
+
+<style>
+
+</style>

@@ -3,8 +3,18 @@ import LandingView from "../views/LandingView.vue";
 
 
 const router = createRouter({
-  history: createWebHistory(import.meta.env.BASE_URL),
+  history: createWebHistory(),
   mode: 'history',
+  scrollBehavior: function(to, from, savedPosition) {
+    if (savedPosition) {
+      return savedPosition
+    } 
+    if (to.hash) {
+        return {selector: to.hash}
+    } else {
+        return { x: 0, y: 0 }
+    }
+},
   routes: [
     {
       path: "/",
@@ -44,12 +54,17 @@ const router = createRouter({
       component: () => import("../views/ResumeView.vue"),
     },
     {
+      path: "/contact",
+      name: "Contact",
+      component: () => import("../views/ContactView.vue"),
+    },
+    {
       path: "/404",
       component: () => import('../views/404.vue')
     },
     {
       path: "/:catchAll(.*)",
-      redirect: "/404",
+      redirect: "/",
     },
   ],
 });
