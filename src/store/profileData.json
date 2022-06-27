@@ -1,0 +1,43 @@
+[
+    {
+        "title": "Austin Dober",
+        "subtitle": ["Full Stack Software Engineer", "Frontend Software Developer", "UX/UI Developer"],
+        "github": "https://github.com/austdobe",
+        "linkedIn": "https://linkedIn.com/in/austin-dober",
+        "facebook": "https://www.facebook.com/adoberweb",
+        "jobs": [
+            {
+                "title": "Software Engineer",
+                "company": "Internetwork Expert (INE)",
+                "roles" : [
+                    {
+                        "title": "Frontend Developer for Support Application.",
+                        "description": [
+                            "This application managed all user profile information. This provided the support staff the ability to make changes to the users profile information that was stored in the server.",
+                            "Main Task was to create endpoint calls to pull information from the server. A few tickets that were completed during my time here are: Add ability to change user account type (paid vs free), Add section to create/edit/view user notes, Add section to view billing notes, Improve search results to allow search by name or email, Created section to create new accounts",
+                            "Technology used: Vue 3, TypeScript/TSX, Scss, Google Tag Manager"
+                        ]
+                    },
+                    {
+                        "title": "Frontend Developer for Checkout Application.",
+                        "description":[
+                            "This application handled all business to client purchases and handled majority of the user account creation",
+                            "Main Tasks were to connect with our purchase software, utilizing Recurly, to transfer payment information in a secure way, capture and send marketing data, utilizing Braze, related to the users activity throughout the application, update and manage content on the app: such as adding/removing promotional plans, adding new purchaseable certifications", 
+                            "Technology used: Vue 2, TypeScript, Scss, Recurly, Braze, Google Tag Manager"
+                        ]
+                    },  
+                    {  
+                        "title": "Frontend Developer for Marketing Site.",
+                        "description": [
+                            "This application was the main marketing site. This application provided information about what INE is and basic information about the various trainings, plans and products they sell.",
+                            "This application was built by 2 different agencies, this was finally inherited by me to manage and improve the code functionality. My main job was to create the ability for marketing team to adjust the constant changing information using graphCMS", 
+                            "Technology used: Next.js, Typescript/TSX, Tailwind CSS, Braze, Google Tag Manager"
+                        ]
+                    }
+                ],
+                "description": ["INE provides subscription based services that provide educational material and certification courses for Cyber Security."]
+            }
+        ],
+        "objective": " I am a full stack JavaScript engineer. I have experience developing in an agile work setting, which consisted of participating in daily standup meeting and bi-weekly sprints. I have experience with team collaboration and code reviews, and I have experience with API utilization. I have built a number of different projects, both personal and business applications, using API/Server calls." 
+    }
+]

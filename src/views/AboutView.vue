@@ -1,20 +1,13 @@
 <script setup>
-import HeroImage from '../components/HeroImage.vue';
-import Profile from '../components/Profile.vue';
+import HeroImage from "../components/HeroImage.vue";
+import ProfileSection from "../components/ProfileSection.vue";
 </script>
 
 <template>
-  <HeroImage 
-    msg="I BUILD FULL STACK DIGITAL ASSETS"
-  />
-  <Profile id="me" header="Austin Dober"/>
+  <HeroImage msg="I BUILD FULL STACK DIGITAL ASSETS" />
+  <ProfileSection id="me" />
 </template>
 
-<script>
+<script></script>
 
-
-</script>
-
-<style>
-
-</style>
+<style></style>

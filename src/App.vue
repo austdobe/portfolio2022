@@ -1,12 +1,15 @@
 <script setup>
 import { RouterView } from "vue-router";
 import NavBar from "./components/NavBar.vue";
+import FootBar from "./components/FootBar.vue";
 </script>
 
 <template>
-    <NavBar v-if="!$route.meta.hideNavbar"/>
+  <NavBar v-if="!$route.meta.hideNavbar" />
 
   <RouterView />
+
+  <FootBar v-if="!$route.meta.hideNavbar" />
 </template>
 
 <style>
@@ -42,7 +45,7 @@ a,
 
 @media (hover: hover) {
   a:hover {
-    background-color: hsla(160, 100%, 37%, 0.2);
+    color: darkgreen;
   }
 }
 </style>

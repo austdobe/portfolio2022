@@ -1,19 +1,20 @@
 import { createRouter, createWebHashHistory } from "vue-router";
-import { routes } from './routes'
+import { routes } from "./routes";
 
 const router = createRouter({
   history: createWebHashHistory(),
-  scrollBehavior: function(to, from, savedPosition) {
+  scrollBehavior: function (to, from, savedPosition) {
     if (savedPosition) {
-      return savedPosition
-    } 
+      return savedPosition;
+    }
     if (to.hash) {
-        return {selector: to.hash}
-    } else {
-        return { x: 0, y: 0 }
+      return {
+        el: to.hash,
+        behavior: "smooth",
+      };
     }
   },
-  routes
+  routes,
 });
 
 export default router;

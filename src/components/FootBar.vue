@@ -3,49 +3,21 @@ import { RouterLink } from "vue-router";
 </script>
 
 <template>
-  <nav>
-    <RouterLink to="/">Austin Dober</RouterLink>
-    <RouterLink to="/about">About</RouterLink>
-    <RouterLink to="/work">Work</RouterLink>
-    <RouterLink to="/contact">Contact</RouterLink>
-  </nav>
+  <div class="wrapper">
+    <h1>Austin Dober</h1>
+    <h2>Full Stack Software Engineer</h2>
+  </div>
 </template>
 
 <style scoped>
-    nav {
-        position: absolute;
-        bottom:0;
-        width: fit-content;
-        max-height: 100px;
-        font-size: 12px;
-        margin: 0 auto;
-        text-align: center;
-    }
-
-    nav a.router-link-exact-active {
-        color: var(--color-text);
-    }
-
-    nav a.router-link-exact-active:hover {
-        background-color: transparent;
-    }
-
-    nav a {
-        display: inline-block;
-        padding: 0 1rem;
-        border-left: 1px solid var(--color-border);
-    }
-
-    nav a:first-of-type {
-        border: 0;
-    }
-
-    @media (min-width: 1024px) {
-        nav {
-            text-align: left;
-            margin-left: -1rem;
-            font-size: 1rem;
-            padding: 1rem 0;
-        }
-    }
+.wrapper {
+  width: 100%;
+  height: 300px;
+  font-size: 12px;
+  margin: 0 auto;
+  text-align: center;
+  justify-content: center;
+  align-content: center;
+  display: grid;
+}
 </style>

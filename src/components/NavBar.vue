@@ -3,12 +3,12 @@ import { RouterLink } from "vue-router";
 </script>
 <template>
   <nav>
-    <RouterLink class='title' to="/">@Austin Dober</RouterLink>
+    <RouterLink class="title" to="/">@Austin Dober</RouterLink>
     <div class="options">
       <RouterLink to="/about">About</RouterLink>
       <RouterLink to="/work">Work</RouterLink>
       <RouterLink to="/contact">Contact</RouterLink>
-  </div>
+    </div>
   </nav>
 </template>
 
@@ -21,7 +21,7 @@ nav {
   margin: 0 30px;
   text-align: center;
 }
-.options{
+.options {
   position: absolute;
   right: 0;
   margin-top: 20px;

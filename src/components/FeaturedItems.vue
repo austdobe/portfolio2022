@@ -1,5 +1,4 @@
 <script setup>
-
 defineProps({
   image: {
     type: String,
@@ -16,28 +15,26 @@ defineProps({
   redirect: {
     type: String,
     required: true,
-  }
-  
+  },
 });
 const getImageUrl = (image) => {
-  return new URL(`../assets/images/${image}`, import.meta.url).href
-}
+  return new URL(`../assets/images/${image}`, import.meta.url).href;
+};
 </script>
 <!-- add hover effect onto the details section that shows when image is hovered on.  -->
 <template>
   <div class="item">
     <div class="imageWrapper">
-      <router-link class="cardAction" :to='{path: `/work/${redirect}`}'>
-      <img :src='getImageUrl(image)' />
+      <router-link class="cardAction" :to="{ path: `/work/${redirect}` }">
+        <img :src="getImageUrl(image)" />
       </router-link>
     </div>
     <div class="details">
       <h3>
-        {{heading}}
+        {{ heading }}
       </h3>
-      <p>{{description}}</p>
+      <p>{{ description }}</p>
     </div>
-    
   </div>
 </template>
 
@@ -50,29 +47,27 @@ const getImageUrl = (image) => {
   border-radius: 25px;
 }
 
-
 img {
   width: 100%;
   height: 100%;
   border-radius: 25px 25px 0 0;
 }
-.imageWrapper{
+.imageWrapper {
   position: absolute;
   height: 50%;
   width: 100%;
   top: 0;
   overflow: hidden;
 }
-.imageWrapper:hover + .details{
+.imageWrapper:hover + .details {
   display: flex;
 }
-.cardAction{
+.cardAction {
   color: white;
   cursor: pointer;
-
 }
 
-.details{
+.details {
   background: linear-gradient(112.38deg, #a6a6a6 -36.8%, #4d4d4d 112.38%);
   color: white;
   display: block;
@@ -88,6 +83,4 @@ img {
   align-content: center;
   flex-direction: column;
 }
- 
-
 </style>
