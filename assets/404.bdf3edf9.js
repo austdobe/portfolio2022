@@ -1,0 +1,1 @@
+import{_ as e,c as _,o as r}from"./index.185e86a4.js";const t={};function a(c,n){return r(),_("h1",null,"Opps! Wrong turn!")}var s=e(t,[["render",a],["__scopeId","data-v-07360147"]]);export{s as default};
