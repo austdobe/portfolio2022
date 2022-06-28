@@ -2,6 +2,8 @@
 import { RouterView } from "vue-router";
 import NavBar from "./components/NavBar.vue";
 import FootBar from "./components/FootBar.vue";
+import { getAllRepos } from "./hooks/getGithubStats"
+
 </script>
 
 <template>
@@ -11,6 +13,14 @@ import FootBar from "./components/FootBar.vue";
 
   <FootBar v-if="!$route.meta.hideNavbar" />
 </template>
+<script>
+export default {
+  created() {
+    getAllRepos();
+  }
+}
+
+</script>
 
 <style>
 @import "@/assets/base.css";

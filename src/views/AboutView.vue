@@ -10,4 +10,9 @@ import ProfileSection from "../components/ProfileSection.vue";
 
 <script></script>
 
-<style></style>
+<style>
+template{
+  width: 100%;
+  overflow: hidden;
+}
+</style>

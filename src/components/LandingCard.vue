@@ -116,7 +116,7 @@ h3 {
     color: white;
     width: 90%;
     font-size: 28px;
-    margin-top: 20px;
+    margin: 20px auto;
     align-items: center;
     justify-content: center;
     align-content: center;

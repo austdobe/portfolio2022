@@ -2,6 +2,7 @@
 import profileData from "../store/profileData.json";
 import ExperienceCard from "./ExperienceCard.vue";
 import PopupModal from "../components/PopupModal.vue";
+import StatsChart from "./StatsChart.vue";
 </script>
 
 <template>
@@ -49,9 +50,6 @@ import PopupModal from "../components/PopupModal.vue";
       </div>
       <div class="skills">
         <h1 class="Label">Skills</h1>
-        <ul>
-          <li v-for="skill in skills"></li>
-        </ul>
       </div>
       <div class="experience">
         <h1 class="label">Professional Experience</h1>
@@ -86,6 +84,11 @@ export default {
       isModalVisible: false,
       modalData: [],
     };
+  },
+  computed: {
+    displayMe() {
+      console.log(this.me)
+    }
   },
   methods: {
     openModal(data) {
@@ -193,6 +196,9 @@ export default {
 @media (max-width: 768px) {
   .grid {
     display: block;
+  }
+  .wrapper{
+    overflow: hidden;
   }
 }
 </style>

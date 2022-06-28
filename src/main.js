@@ -7,11 +7,9 @@ import { library } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import {
   faAngleDown,
+  faBars,
   faCaretDown,
   faCaretRight,
-  faCaretUp,
-  faToggleOff,
-  faToggleOn,
   faUserSecret,
 } from "@fortawesome/free-solid-svg-icons";
 import {
@@ -29,7 +27,8 @@ library.add(
   faGithubSquare,
   faAngleDown,
   faCaretRight,
-  faCaretDown
+  faCaretDown,
+  faBars
 );
 
 createApp(App)

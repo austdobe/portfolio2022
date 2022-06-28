@@ -126,7 +126,8 @@ export default {
 }
 @media (max-width: 768px) {
   .modal{
-    max-width: 100%;
+    max-width: 90%;
+    margin: 10px auto;
   }
   
 }

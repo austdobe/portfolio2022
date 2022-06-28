@@ -2,20 +2,37 @@
 import { RouterLink } from "vue-router";
 </script>
 <template>
-  <nav>
-    <RouterLink class="title" to="/">@Austin Dober</RouterLink>
-    <div class="options">
+  <nav class="wrapper">
+      <div class="icon" @click="handleToggle">
+        <font-awesome-icon icon="fa-solid fa-bars" size="2x" />
+      </div>
+    <div class="navItems" v-if="isShown">
+      <RouterLink class="title" to="/">@Austin Dober</RouterLink>
       <RouterLink to="/about">About</RouterLink>
       <RouterLink to="/work">Work</RouterLink>
       <RouterLink to="/contact">Contact</RouterLink>
     </div>
   </nav>
 </template>
+<script>
+export default {
+  data(){
+    return{
+      isShown: true
+    }
+  },
+  methods: {
+    handleToggle() {
+      this.isShown = !this.isShown
+    }
+  }
+}
+</script>
 
-<style>
-nav {
+<style scoped>
+.wrapper {
   display: flex;
-  width: 100%;
+  width: 90%;
   height: var(--nav-height);
   font-size: 12px;
   margin: 0 30px;
@@ -30,6 +47,17 @@ nav {
 .title {
   margin-top: 20px;
   margin-left: 20px;
+}
+.icon{
+  color: white;
+  display: none;
+  margin: auto 0;
+  height: fit-content;
+  width: fit-content;
+  border: 1px solid white;
+  border-radius: 5px;
+  padding: 5px 10px;
+  text-align: center;
 }
 
 nav a.router-link-exact-active {
@@ -58,6 +86,26 @@ nav a:first-of-type {
     margin-left: -1rem;
     font-size: 1rem;
     padding: 1rem 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  .iconWrapper{
+    display: block;
+    border: 1px solid white;
+  }
+  .icon{
+    display: flex;
+  }
+  .navItems{
+    width: 100%;
+    margin: 20px auto;
+    display: block;
+    z-index: 99;
+  }
+  .navItems a {
+    width: 100%;
+    border: none;
+    text-align: center;
   }
 }
 </style>
