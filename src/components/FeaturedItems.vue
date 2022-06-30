@@ -21,19 +21,18 @@ const getImageUrl = (image) => {
   return new URL(`../assets/images/${image}`, import.meta.url).href;
 };
 </script>
-<!-- add hover effect onto the details section that shows when image is hovered on.  -->
 <template>
   <div class="item">
     <div class="imageWrapper">
-      <router-link class="cardAction" :to="{ path: `/work/${redirect}` }">
+       
         <img :src="getImageUrl(image)" />
-      </router-link>
-    </div>
-    <div class="details">
-      <h3>
-        {{ heading }}
-      </h3>
-      <p>{{ description }}</p>
+
+        <router-link class="cardAction" :to="{ path: `/work/${redirect}` }">
+          <div class="detailHeading">
+            <h2>{{ heading }} </h2>
+            <p>{{ description }}</p>
+          </div>
+        </router-link>
     </div>
   </div>
 </template>
@@ -41,46 +40,44 @@ const getImageUrl = (image) => {
 <style scoped>
 .item {
   margin-top: 2rem;
-  width: 100%;
-  min-height: 300px;
+  height: 200px;
+  width: 200px;
   display: flex;
   border-radius: 25px;
+  text-align: center;
 }
 
 img {
   width: 100%;
   height: 100%;
-  border-radius: 25px 25px 0 0;
-}
-.imageWrapper {
-  position: absolute;
-  height: 60%;
-  width: 100%;
-  top: 0;
-  overflow: hidden;
-}
-.imageWrapper:hover + .details {
-  display: flex;
+  border-radius: 25px;
+
 }
 .cardAction {
   color: white;
-  cursor: pointer;
-}
-
-.details {
-  background: linear-gradient(112.38deg, #a6a6a6 -36.8%, #4d4d4d 112.38%);
+  height: 100%;
+  background: linear-gradient(360deg,  rgba(77, 77, 77, .8) 100%, rgba(166, 166, 166, 0.3)60.38%);
   color: white;
   display: block;
   position: absolute;
-  bottom: 0;
-  border-radius: 0 0 25px 25px;
-  padding: 10px 20px;
-  align-self: center;
-  height: 40%;
+  margin: 0 auto;
+  height: 100%;
   width: 100%;
-  display: none;
-  justify-content: center;
-  align-content: center;
-  flex-direction: column;
+  top:0;
+  border-radius: 25px;
+  cursor: pointer;
+  text-align: center;
+
+}
+.cardAction:hover {
+  background-color: rgba(77, 77, 77, .8);
+  transition: background-color .4s ease-in-out;
+}
+.detailHeading {
+  position: absolute;
+  width:100%;
+  padding: 10px 20px;
+  margin: 0 auto;
+  bottom: 10px;
 }
 </style>

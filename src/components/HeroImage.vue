@@ -16,6 +16,14 @@ defineProps({
 <template>
     <div class="hero">
         <ImageCarousel :images="images" :app="app"/>
+        <RouterLink to="/work#featured">
+            <font-awesome-icon
+                class="icon"
+                icon="fa-solid fa-angle-down"
+                size="2x"
+                bounce
+            />
+        </RouterLink>
     </div>
 </template>
 
@@ -25,6 +33,9 @@ defineProps({
     height: calc(100vh - var(--nav-height));
     width: 100%;
 }
-.images {
+.icon {
+  color: white;
+  position: absolute;
+  bottom: var(--nav-height);
 }
 </style>

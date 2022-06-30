@@ -2,11 +2,15 @@
 import FeaturedItems from "../components/FeaturedItems.vue";
 import appData from "../store/featuredApps.json";
 import HeroImage from "../components/HeroImage.vue";
+import FeaturedSection from "../components/FeaturedSection.vue";
 </script>
 
 <template>
 <HeroImage :images="renderImages" :app="imageData" />
-  <div class="grid">
+<FeaturedSection :apps="apps" id=featured />
+<!-- <div id="featured">
+  <h1 class="featuredHeader">Featured Applications</h1>
+  <div class="featuredGrid">
     <FeaturedItems
       v-for="app in apps"
       :image="app.image"
@@ -14,21 +18,14 @@ import HeroImage from "../components/HeroImage.vue";
       :description="app.description"
       :redirect="app.redirect"
     />
-    <!-- <FeaturedItems
-      v-for="app in notFeatured"
-      :image="app.image"
-      :heading="app.heading"
-      :description="app.description"
-      :redirect="app.redirect"
-    /> -->
   </div>
-  <!-- <button @click="handleShow" class="toggleAction">{{ handleLabel }}</button> -->
+</div> -->
 </template>
 <script>
 export default {
   data() {
     return {
-      apps: appData,
+      apps: appData.apps,
       showMore: false,
       imageData: []
     };
@@ -62,15 +59,27 @@ export default {
 </script>
 
 <style>
-.grid {
+#featured {
+  background: linear-gradient(165.6deg, #191919 5%, #d9d2d2 70%, #191919 );;
+  color: White;
+}
+.featuredHeader {
+  text-decoration: underline;
+  font-size: 50px;
+  font-family: 'Arima', cursive;
+  font-weight: 800;
+  padding: 10px 20px;
+}
+.featuredGrid {
+  min-height: 100vh;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  background: url("http://www.zingerbugimages.com/backgrounds/green_marble_background_seamless.jpg");
-  gap: 20px;
+  grid-template-columns: 1fr 1fr 1fr ;
+  gap: 10px;
   align-items: center;
   align-content: center;
   justify-content: center;
   justify-items: center;
+  z-index:3;
 }
 .toggleAction {
   color: white;
