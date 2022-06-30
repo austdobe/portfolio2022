@@ -1,32 +1,16 @@
 <script setup>
-import profileData from "../store/profileData.json";
-import ExperienceCard from "./ExperienceCard.vue";
-import PopupModal from "../components/PopupModal.vue";
-import StatsChart from "./StatsChart.vue";
+import SkillCards from "./SkillCards.vue";
+
+defineProps({
+  profileData: {
+    type: Object,
+    required: true
+  }
+})
 </script>
 
 <template>
-  <div class="wrapper">
-    <PopupModal v-show="isModalVisible" @close="closeModal">
-      <template v-slot:header>
-        <h3>{{ modalData.title }}</h3>
-        <h3>{{ modalData.company }}</h3>
-      </template>
-
-      <template v-slot:body>
-        <div v-for="descriptions in modalData.description">
-          <h3>{{ descriptions }}</h3>
-        </div>
-        <div v-for="role in modalData.roles">
-          <h3>{{ role.title }}</h3>
-          <ul>
-            <li v-for="descriptions in role.description">{{ descriptions }}</li>
-          </ul>
-        </div>
-      </template>
-      <template v-slot:footer></template>
-    </PopupModal>
-    <div class="grid">
+    <div class="profileGrid" id="me">
       <div class="title">
         <img class="profileImage" src="../assets/images/Headshot.jpg" />
         <div class="heading">
@@ -48,47 +32,27 @@ import StatsChart from "./StatsChart.vue";
           </div>
         </div>
       </div>
-      <div class="skills">
-        <h1 class="Label">Skills</h1>
-      </div>
-      <div class="experience">
-        <h1 class="label">Professional Experience</h1>
-        <ExperienceCard
-          @click="openModal(job)"
-          v-for="job in jobs"
-          :bind="key"
-          :title="job.title"
-          :company="job.company"
-          :description="job.description"
-          :roles="job.roles"
-        />
-      </div>
       <div class="objective">
-        <div class="objective_description">
-          {{ objective }}
+        <div class="objective_description" v-for="objectives in objective">
+          <p>{{objectives}}</p>
         </div>
       </div>
     </div>
-  </div>
 </template>
 
 <script>
 export default {
   data() {
     return {
-      profile: profileData[0],
-      subtitle: profileData[0].subtitle,
-      objective: profileData[0].objective,
-      jobs: profileData[0].jobs,
-      skills: profileData[0].skills,
+      profile: this.profileData,
+      subtitle: this.profileData.subtitle,
+      objective: this.profileData.objective,
+      jobs: this.profileData.jobs,
+      skills: this.profileData.skills[0],
+      software: this.profileData.software,
       isModalVisible: false,
       modalData: [],
     };
-  },
-  computed: {
-    displayMe() {
-      console.log(this.me)
-    }
   },
   methods: {
     openModal(data) {
@@ -102,20 +66,22 @@ export default {
     },
   },
 };
+
 </script>
 
 <style scoped>
-.wrapper {
+.profileWrapper {
   background: gray;
   color: white;
   width: 100%;
   min-height: 100vh;
 }
-.grid {
+.profileGrid {
+  color: white;
+  width: 100%;
   width: 100%;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-areas: "skillsColumn titleColumn experienceColumn" "objectiveColumn objectiveColumn objectiveColumn";
+  grid-auto-flow: column;
 }
 .label {
   text-decoration: underline;
@@ -125,13 +91,10 @@ export default {
   margin: auto;
   height: 100%;
   width: 100%;
-  justify-self: center;
-  align-self: center;
-  grid-area: titleColumn;
-  grid-column-start: 2;
+  
 }
 .heading {
-  margin: 30px auto 0;
+  margin: 0 auto;
   width: 60%;
   height: 100%;
   text-align: center;
@@ -142,7 +105,9 @@ export default {
 }
 .profileImage {
   width: 60%;
-  margin: 30px 20px;
+  margin-top: 30px;
+  margin-left:auto;
+  margin-right:auto;
   border-radius: 50%;
   border: 5px solid white;
 }
@@ -164,41 +129,27 @@ export default {
   color: #636261;
   background-color: transparent;
 }
-
-.skills {
-  margin: auto;
-  height: 100%;
-  width: 100%;
-  grid-column-start: 1;
-  grid-area: skillsColumn;
-}
-
-.experience {
-  margin: auto;
-  height: 100%;
-  width: 100%;
-  grid-column-start: 3;
-  grid-area: experienceColumn;
-}
 .objective {
-  margin: auto;
   height: 100%;
-  width: 100%;
-  grid-row-start: 4;
-  grid-area: objectiveColumn;
+  padding: 30px
 }
 .objective_description {
-  font-size: 16px;
-  width: 80%;
-  margin: 20px auto;
+  font-size: 18px;
+  width: 100%;
+  margin: auto 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+.objective_description p {
+  margin-top: 20px;
+  text-align: left;
 }
 
 @media (max-width: 768px) {
-  .grid {
+  .profileGrid {
     display: block;
-  }
-  .wrapper{
-    overflow: hidden;
   }
 }
 </style>

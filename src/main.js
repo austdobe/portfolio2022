@@ -10,6 +10,8 @@ import {
   faBars,
   faCaretDown,
   faCaretRight,
+  faToggleOff,
+  faToggleOn,
   faUserSecret,
 } from "@fortawesome/free-solid-svg-icons";
 import {
@@ -28,7 +30,9 @@ library.add(
   faAngleDown,
   faCaretRight,
   faCaretDown,
-  faBars
+  faBars,
+  faToggleOff,
+  faToggleOn
 );
 
 createApp(App)

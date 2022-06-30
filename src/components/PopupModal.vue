@@ -1,10 +1,18 @@
-<script setup></script>
+<script setup>
+defineProps({
+  modalData: {
+    type: Object,
+    required: true
+  }
+})
+</script>
 
 <template>
   <div class="modal-backdrop">
     <div class="modal">
       <header class="modal-header">
-        <slot name="header"></slot>
+        <h3>{{ modalData.title }}</h3>
+        <h3>{{ modalData.company }}</h3>
         <button
           type="button"
           class="btn-close"
@@ -13,11 +21,17 @@
           x
         </button>
       </header>
-
       <section class="modal-body">
-        <slot name="body"></slot>
+        <div v-for="descriptions in modalData.description">
+          <h3>{{ descriptions }}</h3>
+        </div>
+        <div v-for="role in modalData.roles">
+          <h3>{{ role.title }}</h3>
+          <ul>
+            <li v-for="descriptions in role.description">{{ descriptions }}</li>
+          </ul>
+        </div>
       </section>
-
       <footer class="modal-footer">
         <slot name="footer"></slot>
         <button type="button" class="btn-green" @click="close">
@@ -56,7 +70,7 @@ export default {
   overflow-x: auto;
   display: flex;
   max-width: 60%;
-  height: 90%;
+  max-height: 90%;
   flex-direction: column;
   overflow-y: scroll;
   overflow-x: hidden;

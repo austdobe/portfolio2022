@@ -69,8 +69,10 @@ export default {
 </script>
 <style scoped>
 .experienceCard {
+  width: 100%;
   margin: 20px 20px;
   border-radius: 25px;
+  font-size: 16px;
   text-align: justify;
   padding: 10px 20px;
   background: linear-gradient(112.38deg, #909191 -36.89%, #5d5e5e 112.38%);

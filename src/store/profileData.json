@@ -5,6 +5,85 @@
         "github": "https://github.com/austdobe",
         "linkedIn": "https://linkedIn.com/in/austin-dober",
         "facebook": "https://www.facebook.com/adoberweb",
+        "skills": [
+            {
+                "Languages": [
+                    {
+                        "title": "TypeScript",
+                        "proficiencyLevel": 4
+                    },
+                    {
+                        "title": "JavaScript",
+                        "proficiencyLevel": 4
+                    },
+                    {
+                        "title": "HTML",
+                        "proficiencyLevel": 5
+                    },
+                    {
+                        "title": "CSS",
+                        "proficiencyLevel": 5
+                    }
+                ],
+                "Frameworks" : [
+                        {
+                            "title": "VueJS",
+                            "proficiencyLevel": 4
+                        },
+                        {
+                            "title": "ReactJS",
+                            "proficiencyLevel": 4
+                        },
+                        {
+                            "title": "NextJS",
+                            "proficiencyLevel": 4
+                        }
+                ],
+                "Libraries": [
+                    {
+                        "title": "Scss",
+                        "proficiencyLevel": 5
+                    },
+                    {
+                        "title": "Bootstrap CSS", 
+                        "proficiencyLevel": 5
+                    },
+                    {
+                        "title": "Tailwind CSS", 
+                        "proficiencyLevel": 4
+                    },
+                    {
+                        "title": "JQuery", 
+                        "proficiencyLevel": 5
+                    }
+                ],
+                "Deployment" : [
+                    {
+                        "title": "Vercel", 
+                        "proficiencyLevel": 5
+                    },
+                    {
+                        "title": "Github Pages",
+                        "proficiencyLevel": 5
+                    },
+                    {
+                        "title": "Heroku", 
+                        "proficiencyLevel": 4
+                    }
+
+                ],
+                "Workflow" : [
+                    {
+                        "title": "Jira",
+                        "proficiencyLevel": 5
+                    },
+                    {
+                        "title": "Github",
+                        "proficiencyLevel": 5
+                    }
+                ]
+            }
+        ],
         "jobs": [
             {
                 "title": "Software Engineer",
@@ -36,8 +115,33 @@
                     }
                 ],
                 "description": ["INE provides subscription based services that provide educational material and certification courses for Cyber Security."]
+            },
+            {
+                "title": "Software Engineer",
+                "company": "Freelance",
+                "roles" : [
+                    {
+                        "title": "Development and Design of local food truck website.",
+                        "description": [
+                            "This application managed all marketing information for the food truck, such as: location, menu, hours of operation, contact info and event planning.",
+                            "Technology used: Wordpress, CSS"
+                        ]
+                    },
+                    {
+                        "title": "Development and Design of photo business website",
+                        "description":[
+                            "This application handled all marketing information for the food truck, such as: location, hours of operation, contact info and products.",
+                            "Technology used: Wordpress, CSS"
+                        ]
+                    }
+                ],
+                "description": ["Direct Client based work. Speaking with current and potential clients to find ways of enhancing their business and creating a stronger digital presence. "]
             }
         ],
-        "objective": " I am a full stack JavaScript engineer. I have experience developing in an agile work setting, which consisted of participating in daily standup meeting and bi-weekly sprints. I have experience with team collaboration and code reviews, and I have experience with API utilization. I have built a number of different projects, both personal and business applications, using API/Server calls." 
+        "objective": [
+            "I am a Full Stack JavaScript engineer. I have experience developing in an agile work setting, which consisted of participating in daily standup meeting and bi-weekly sprints. I have experience with team collaboration and code reviews, and I have experience with API utilization. I have built a number of different projects, both personal and business applications, using API/Server calls.",
+            "I have built over 30 different applications ranging from Frontend applications to Full Stack applications. I regularly participate in Hackathons. I participated in 3 Mintbean Hackathons receiving full marks for my projects created. My most memorable at this time is my Super Mario application.",
+            "When I don't have my head stuck in my IDE, I find myself spending time with my wife and dog. We enjoy going for long hikes through the various national parks that grace our beautiful state of North Carolina. We also enjoy traveling; we make frequent trips back home to Vermont, as well as visiting some of the better attractions of North Carolina such as: Asheville and Wilmington"
+        ]
     }
 ]

@@ -16,8 +16,8 @@ defineProps({
         I am Austin Dober, a Fullstack Software Engineer with the main focus of
         clean UX/UI. Feel free to look around and get to
         <RouterLink to="/about">know me</RouterLink>. If you have any questions,
-        or would like to work together, feel free to
-        <a target="_blank" href="mailto: austin.dober@gmail.com">contact</a> me.
+        or would like to work together,
+        <a target="_blank" href="mailto: austin.dober@gmail.com">contact</a> me directly.
         <div class="links">
           <a href="https://linkedin.com/in/austin-dober" target="_blank">
             <font-awesome-icon icon="fa-brands fa-linkedin" size="2x" />
