@@ -1,18 +1,21 @@
 <script setup>
-import HeroImage from "../components/HeroImage.vue";
+import HeroNoImage from "../components/HeroNoImage.vue";
 import ProfileSection from "../components/ProfileSection.vue";
 import PopupModal from "../components/PopupModal.vue";
 import ExperienceCard from "../components/ExperienceCard.vue";
 
 import profileData from "../store/profileData.json";
 import SkillCards from "../components/SkillCards.vue";
-
 </script>
 
 <template>
-  <PopupModal v-show="isModalVisible" @close="closeModal" :modalData="modalData"/>
+  <PopupModal
+    v-show="isModalVisible"
+    @close="closeModal"
+    :modalData="modalData"
+  />
   <section>
-    <HeroImage msg="I BUILD FULL STACK DIGITAL ASSETS" />
+    <HeroNoImage msg="I BUILD FULL STACK DIGITAL ASSETS" />
   </section>
   <section>
     <ProfileSection id="me" :profileData="profile" />
@@ -28,7 +31,7 @@ import SkillCards from "../components/SkillCards.vue";
     />
   </section>
   <section>
-    <SkillCards :skill="skills"/>
+    <SkillCards :skill="skills" />
   </section>
 </template>
 
@@ -46,34 +49,34 @@ export default {
   methods: {
     openModal(data) {
       this.modalData = data;
-      console.log(this.modalData)
+      console.log(this.modalData);
       this.isModalVisible = true;
-      this.$refs.PopupModal.focus()
+      this.$refs.PopupModal.focus();
     },
     closeModal() {
       this.isModalVisible = false;
     },
   },
-}
+};
 </script>
 
 <style>
-template{
+template {
   width: 100%;
   margin: 0 auto;
   overflow: hidden;
 }
-.aboutGrid{
+.aboutGrid {
   width: 100%;
   display: grid;
   grid-auto-flow: column;
-  gap: 20px
+  gap: 20px;
 }
 section {
   margin-bottom: 30px;
 }
-@media (max-width:  768px){
-  .aboutGrid{
+@media (max-width: 768px) {
+  .aboutGrid {
     display: block;
     margin: 0 auto;
     justify-self: center;

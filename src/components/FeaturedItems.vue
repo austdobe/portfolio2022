@@ -1,7 +1,7 @@
 <script setup>
 defineProps({
   image: {
-    type: String,
+    type: Array,
     required: true,
   },
   heading: {
@@ -41,7 +41,7 @@ const getImageUrl = (image) => {
 <style scoped>
 .item {
   margin-top: 2rem;
-  width: 75%;
+  width: 100%;
   min-height: 300px;
   display: flex;
   border-radius: 25px;
@@ -54,7 +54,7 @@ img {
 }
 .imageWrapper {
   position: absolute;
-  height: 50%;
+  height: 60%;
   width: 100%;
   top: 0;
   overflow: hidden;
@@ -76,7 +76,7 @@ img {
   border-radius: 0 0 25px 25px;
   padding: 10px 20px;
   align-self: center;
-  height: 50%;
+  height: 40%;
   width: 100%;
   display: none;
   justify-content: center;

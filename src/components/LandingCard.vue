@@ -17,7 +17,8 @@ defineProps({
         clean UX/UI. Feel free to look around and get to
         <RouterLink to="/about">know me</RouterLink>. If you have any questions,
         or would like to work together,
-        <a target="_blank" href="mailto: austin.dober@gmail.com">contact</a> me directly.
+        <a target="_blank" href="mailto: austin.dober@gmail.com">contact</a> me
+        directly.
         <div class="links">
           <a href="https://linkedin.com/in/austin-dober" target="_blank">
             <font-awesome-icon icon="fa-brands fa-linkedin" size="2x" />
@@ -97,22 +98,25 @@ h3 {
 }
 
 @media (min-width: 1024px) {
-  
   .greetings h1,
   .greetings h3 {
     text-align: left;
   }
 }
 @media (max-width: 768px) {
-  .container{
+  .container {
     display: block;
-    background: linear-gradient(180deg, rgba(24, 24, 24, 0.8) 50%, rgba(24, 24, 24, 0.0) 112.3%),
-    url("../assets/images/forestBackground.jpg");
+    background: linear-gradient(
+        180deg,
+        rgba(24, 24, 24, 0.8) 50%,
+        rgba(24, 24, 24, 0) 112.3%
+      ),
+      url("../assets/images/forestBackground.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
   }
-  .greetings{
+  .greetings {
     color: white;
     width: 90%;
     font-size: 28px;
@@ -120,7 +124,7 @@ h3 {
     align-items: center;
     justify-content: center;
     align-content: center;
-    justify-items: center; 
+    justify-items: center;
   }
   .links {
     margin-left: auto;

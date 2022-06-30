@@ -2,6 +2,11 @@
     {
         "heading": "Super Mario",
         "image": "mariogame.jpg",
+        "images": [
+            "marioLvl1.jpg",
+            "marioLvl2.PNG",
+            "mariolvl3.PNG"
+        ],
         "description": "Rebuilt Super Mario game powered by Kaboom.js",
         "redirect": "SuperMario",
         "isFeatured" : true

@@ -4,40 +4,40 @@ import SkillCards from "./SkillCards.vue";
 defineProps({
   profileData: {
     type: Object,
-    required: true
-  }
-})
+    required: true,
+  },
+});
 </script>
 
 <template>
-    <div class="profileGrid" id="me">
-      <div class="title">
-        <img class="profileImage" src="../assets/images/Headshot.jpg" />
-        <div class="heading">
-          <h1>{{ profile.title }}</h1>
-          <h3 v-for="subs in subtitle">{{ subs }}</h3>
-          <div class="links">
-            <a :href="profile.linkedIn" target="_blank">
-              <font-awesome-icon icon="fa-brands fa-linkedin" size="2x" />
-            </a>
-            <a :href="profile.facebook" target="_blank">
-              <font-awesome-icon icon="fa-brands fa-facebook-f" size="2x" />
-            </a>
-            <RouterLink to="./resume">
-              <font-awesome-icon icon="fa-brands fa-readme" size="2x" />
-            </RouterLink>
-            <a :href="profile.github" target="_blank">
-              <font-awesome-icon icon="fa-brands fa-github-square" size="2x" />
-            </a>
-          </div>
-        </div>
-      </div>
-      <div class="objective">
-        <div class="objective_description" v-for="objectives in objective">
-          <p>{{objectives}}</p>
+  <div class="profileGrid" id="me">
+    <div class="title">
+      <img class="profileImage" src="../assets/images/Headshot.jpg" />
+      <div class="heading">
+        <h1>{{ profile.title }}</h1>
+        <h3 v-for="subs in subtitle">{{ subs }}</h3>
+        <div class="links">
+          <a :href="profile.linkedIn" target="_blank">
+            <font-awesome-icon icon="fa-brands fa-linkedin" size="2x" />
+          </a>
+          <a :href="profile.facebook" target="_blank">
+            <font-awesome-icon icon="fa-brands fa-facebook-f" size="2x" />
+          </a>
+          <RouterLink to="./resume">
+            <font-awesome-icon icon="fa-brands fa-readme" size="2x" />
+          </RouterLink>
+          <a :href="profile.github" target="_blank">
+            <font-awesome-icon icon="fa-brands fa-github-square" size="2x" />
+          </a>
         </div>
       </div>
     </div>
+    <div class="objective">
+      <div class="objective_description" v-for="objectives in objective">
+        <p>{{ objectives }}</p>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script>
@@ -57,16 +57,15 @@ export default {
   methods: {
     openModal(data) {
       this.modalData = data;
-      console.log(this.modalData)
+      console.log(this.modalData);
       this.isModalVisible = true;
-      this.$refs.PopupModal.focus()
+      this.$refs.PopupModal.focus();
     },
     closeModal() {
       this.isModalVisible = false;
     },
   },
 };
-
 </script>
 
 <style scoped>
@@ -91,7 +90,6 @@ export default {
   margin: auto;
   height: 100%;
   width: 100%;
-  
 }
 .heading {
   margin: 0 auto;
@@ -106,8 +104,8 @@ export default {
 .profileImage {
   width: 60%;
   margin-top: 30px;
-  margin-left:auto;
-  margin-right:auto;
+  margin-left: auto;
+  margin-right: auto;
   border-radius: 50%;
   border: 5px solid white;
 }
@@ -131,7 +129,7 @@ export default {
 }
 .objective {
   height: 100%;
-  padding: 30px
+  padding: 30px;
 }
 .objective_description {
   font-size: 18px;
@@ -140,7 +138,6 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
-  
 }
 .objective_description p {
   margin-top: 20px;

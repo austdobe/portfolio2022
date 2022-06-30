@@ -2,9 +2,9 @@
 defineProps({
   modalData: {
     type: Object,
-    required: true
-  }
-})
+    required: true,
+  },
+});
 </script>
 
 <template>
@@ -13,13 +13,7 @@ defineProps({
       <header class="modal-header">
         <h3>{{ modalData.title }}</h3>
         <h3>{{ modalData.company }}</h3>
-        <button
-          type="button"
-          class="btn-close"
-          @click="close"
-        >
-          x
-        </button>
+        <button type="button" class="btn-close" @click="close">x</button>
       </header>
       <section class="modal-body">
         <div v-for="descriptions in modalData.description">
@@ -75,7 +69,6 @@ export default {
   overflow-y: scroll;
   overflow-x: hidden;
   z-index: 99;
-
 }
 
 .modal-header,
@@ -123,7 +116,7 @@ export default {
   background: transparent;
 }
 .btn-close:hover {
-  color: #c0c2c2
+  color: #c0c2c2;
 }
 
 .btn-green {
@@ -136,13 +129,12 @@ export default {
   border-radius: 25px;
 }
 .btn-green:hover {
-  background: #c0c2c2
+  background: #c0c2c2;
 }
 @media (max-width: 768px) {
-  .modal{
+  .modal {
     max-width: 90%;
     margin: 10px auto;
   }
-  
 }
 </style>

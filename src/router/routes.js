@@ -43,7 +43,7 @@ export const routes = [
   },
   {
     path: "/404",
-    component: () => import("../views/404.vue"),
+    component: () => import("../views/NotFound.vue"),
   },
   {
     path: "/:catchAll(.*)",

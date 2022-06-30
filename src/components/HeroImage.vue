@@ -1,55 +1,30 @@
 <script setup>
-import { RouterLink } from "vue-router";
+import ImageCarousel from "./ImageCarousel.vue";
+
 defineProps({
-  msg: {
-    type: String,
-    required: true,
-  },
-  image: {
-    type: String,
-    require: false,
-  },
+    images: {
+        type: Array,
+        required: true
+    },
+    app: {
+        type: Array,
+        required: true,
+    }
 });
 </script>
 
 <template>
-  <div class="hero">
-    <div class="heroDetails">
-      <h1>{{ msg }}</h1>
+    <div class="hero">
+        <ImageCarousel :images="images" :app="app"/>
     </div>
-    <RouterLink to="/about#me">
-      <font-awesome-icon
-        class="icon"
-        icon="fa-solid fa-angle-down"
-        size="2x"
-        bounce
-      />
-    </RouterLink>
-  </div>
 </template>
 
 <style scoped>
 .hero {
-  height: calc(100vh - var(--nav-height));
-  width: 100%;
-  background: url({{image}});
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+    display: block;
+    height: calc(100vh - var(--nav-height));
+    width: 100%;
 }
-.heroDetails {
-  color: white;
-  height: 100%;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  flex-direction: column;
-  font-size: xx-large;
-}
-.icon {
-  color: white;
-  position: absolute;
-  bottom: 0;
+.images {
 }
 </style>

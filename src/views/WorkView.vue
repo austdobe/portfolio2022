@@ -1,26 +1,28 @@
 <script setup>
 import FeaturedItems from "../components/FeaturedItems.vue";
 import appData from "../store/featuredApps.json";
+import HeroImage from "../components/HeroImage.vue";
 </script>
 
 <template>
+<HeroImage :images="renderImages" :app="imageData" />
   <div class="grid">
     <FeaturedItems
-      v-for="app in isFeatured"
+      v-for="app in apps"
       :image="app.image"
       :heading="app.heading"
       :description="app.description"
       :redirect="app.redirect"
     />
-    <FeaturedItems
+    <!-- <FeaturedItems
       v-for="app in notFeatured"
       :image="app.image"
       :heading="app.heading"
       :description="app.description"
       :redirect="app.redirect"
-    />
+    /> -->
   </div>
-  <button @click="handleShow" class="toggleAction">{{ handleLabel }}</button>
+  <!-- <button @click="handleShow" class="toggleAction">{{ handleLabel }}</button> -->
 </template>
 <script>
 export default {
@@ -28,6 +30,7 @@ export default {
     return {
       apps: appData,
       showMore: false,
+      imageData: []
     };
   },
   computed: {
@@ -46,6 +49,9 @@ export default {
       }
       return "Show Less";
     },
+    renderImages() {
+      this.imageData = this.apps.filter(app => app.images)
+    }
   },
   methods: {
     handleShow() {
@@ -59,6 +65,8 @@ export default {
 .grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  background: url("http://www.zingerbugimages.com/backgrounds/green_marble_background_seamless.jpg");
+  gap: 20px;
   align-items: center;
   align-content: center;
   justify-content: center;

@@ -3,18 +3,22 @@ import { RouterLink } from "vue-router";
 </script>
 <template>
   <nav class="wrapper">
-      <div class="icon" @click="handleToggle">
-        <font-awesome-icon v-if="!isShown" icon="fa-solid fa-bars" size="2x" />
-        <font-awesome-icon v-if="isShown" icon="fa-solid fa-circle-xmark" size="2x" />
-        <div>
-          <div v-if="isShown" class="mobileNavItems">
-            <RouterLink class="title" to="/">@Austin Dober</RouterLink>
-            <RouterLink to="/about">About</RouterLink>
-            <RouterLink to="/work">Work</RouterLink>
-            <RouterLink to="/contact">Contact</RouterLink>
-        </div>
+    <div class="icon" @click="handleToggle">
+      <font-awesome-icon v-if="!isShown" icon="fa-solid fa-bars" size="2x" />
+      <font-awesome-icon
+        v-if="isShown"
+        icon="fa-solid fa-circle-xmark"
+        size="2x"
+      />
+      <div>
+        <div v-if="isShown" class="mobileNavItems">
+          <RouterLink class="title" to="/">@Austin Dober</RouterLink>
+          <RouterLink to="/about">About</RouterLink>
+          <RouterLink to="/work">Work</RouterLink>
+          <RouterLink to="/contact">Contact</RouterLink>
         </div>
       </div>
+    </div>
     <div class="navItems">
       <RouterLink class="title" to="/">@Austin Dober</RouterLink>
       <RouterLink to="/about">About</RouterLink>
@@ -25,22 +29,23 @@ import { RouterLink } from "vue-router";
 </template>
 <script>
 export default {
-  data(){
-    return{
-      isShown: false
-    }
+  data() {
+    return {
+      isShown: false,
+    };
   },
   methods: {
     handleToggle() {
-      this.isShown = !this.isShown
-    }
-  }
-}
+      this.isShown = !this.isShown;
+    },
+  },
+};
 </script>
 
 <style scoped>
 .wrapper {
   display: flex;
+  background-color: transparent;
   width: 90%;
   height: var(--nav-height);
   font-size: 12px;
@@ -57,7 +62,7 @@ export default {
   margin-top: 20px;
   margin-left: 20px;
 }
-.icon{
+.icon {
   color: white;
   display: none;
   margin: auto 0;
@@ -98,14 +103,14 @@ nav a:first-of-type {
   }
 }
 @media screen and (max-width: 768px) {
-  .iconWrapper{
+  .iconWrapper {
     display: block;
     border: 1px solid white;
   }
-  .icon{
+  .icon {
     display: flex;
   }
-  .navItems{
+  .navItems {
     width: 100%;
     margin: 20px auto;
     display: none;

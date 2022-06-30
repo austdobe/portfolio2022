@@ -20,7 +20,8 @@
     "gh-pages": "^4.0.0",
     "vue": "^3.2.37",
     "vue-chartjs": "^4.1.1",
-    "vue-router": "^4.0.16"
+    "vue-router": "^4.0.16",
+    "vue3-carousel": "^0.1.40"
   },
   "devDependencies": {
     "@rushstack/eslint-patch": "^1.1.0",
