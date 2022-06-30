@@ -10,6 +10,7 @@ import {
   faBars,
   faCaretDown,
   faCaretRight,
+  faCircleXmark,
   faToggleOff,
   faToggleOn,
   faUserSecret,
@@ -32,7 +33,8 @@ library.add(
   faCaretDown,
   faBars,
   faToggleOff,
-  faToggleOn
+  faToggleOn,
+  faCircleXmark
 );
 
 createApp(App)

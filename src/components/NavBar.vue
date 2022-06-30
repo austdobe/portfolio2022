@@ -4,9 +4,18 @@ import { RouterLink } from "vue-router";
 <template>
   <nav class="wrapper">
       <div class="icon" @click="handleToggle">
-        <font-awesome-icon icon="fa-solid fa-bars" size="2x" />
+        <font-awesome-icon v-if="!isShown" icon="fa-solid fa-bars" size="2x" />
+        <font-awesome-icon v-if="isShown" icon="fa-solid fa-circle-xmark" size="2x" />
+        <div>
+          <div v-if="isShown" class="mobileNavItems">
+            <RouterLink class="title" to="/">@Austin Dober</RouterLink>
+            <RouterLink to="/about">About</RouterLink>
+            <RouterLink to="/work">Work</RouterLink>
+            <RouterLink to="/contact">Contact</RouterLink>
+        </div>
+        </div>
       </div>
-    <div class="navItems" v-if="isShown">
+    <div class="navItems">
       <RouterLink class="title" to="/">@Austin Dober</RouterLink>
       <RouterLink to="/about">About</RouterLink>
       <RouterLink to="/work">Work</RouterLink>
@@ -18,7 +27,7 @@ import { RouterLink } from "vue-router";
 export default {
   data(){
     return{
-      isShown: true
+      isShown: false
     }
   },
   methods: {
@@ -99,7 +108,7 @@ nav a:first-of-type {
   .navItems{
     width: 100%;
     margin: 20px auto;
-    display: block;
+    display: none;
     z-index: 99;
   }
   .navItems a {
