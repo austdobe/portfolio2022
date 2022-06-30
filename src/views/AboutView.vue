@@ -64,11 +64,20 @@ template{
   overflow: hidden;
 }
 .aboutGrid{
+  width: 100%;
   display: grid;
   grid-auto-flow: column;
   gap: 20px
 }
 section {
   margin-bottom: 30px;
+}
+@media (max-width:  768px){
+  .aboutGrid{
+    display: block;
+    margin: 0 auto;
+    justify-self: center;
+    align-self: center;
+  }
 }
 </style>

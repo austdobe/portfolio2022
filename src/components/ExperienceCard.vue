@@ -69,8 +69,8 @@ export default {
 </script>
 <style scoped>
 .experienceCard {
-  width: 100%;
-  margin: 20px 20px;
+  width: 90%;
+  margin: 20px auto;
   border-radius: 25px;
   font-size: 16px;
   text-align: justify;
