@@ -1,4 +1,6 @@
 <script setup>
+import GameFeature from './GameFeature.vue';
+
 defineProps({
     apps: {
         type: Object,
@@ -11,6 +13,7 @@ defineProps({
 <template>
     <div class="featuredWrapper">
         <FeaturedItems
+            @click="handleIFrame(app)"
             v-for="app in apps"
             :image="app.image"
             :heading="app.heading"
@@ -18,10 +21,24 @@ defineProps({
             :redirect="app.redirect"
         />
     </div>
+    <GameFeature class="gameFeature" :appURL="iFrameData"></GameFeature>
 </template>
 
 <script>
-import FeaturedItems from './FeaturedItems.vue';
+import FeaturedItems from './FeaturedItems.vue'
+export default {
+    data(){
+        return {
+            iFrameData: ''
+        }
+    },
+    methods: {
+        handleIFrame(job) { 
+            this.iFrameData = job.application 
+
+        }
+    }
+}
 </script>
 
 <style>
@@ -29,8 +46,12 @@ import FeaturedItems from './FeaturedItems.vue';
     display: grid;
     grid-auto-flow: column;
     gap: 5px;
+    align-items: center;
+    justify-items: center;
     width: 100%;
-    min-height: 100vh;
+}
+.gameFeature{
+    grid-row-start: 2;
 }
 @media (max-width: 768px) {
     .featuredWrapper {

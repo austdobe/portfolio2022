@@ -70,7 +70,7 @@ export default {
 <style scoped>
 .experienceCard {
   width: 90%;
-  margin: 20px auto;
+  margin: 100px auto;
   border-radius: 25px;
   font-size: 16px;
   text-align: justify;

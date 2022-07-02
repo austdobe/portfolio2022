@@ -1,12 +1,16 @@
 <script setup>
-import { getRepoLanguages } from "../hooks/getGithubStats";
-import { getAllRepos } from "../hooks/getGithubStats";
 import { store } from "../store/store";
 </script>
 
 <template>
-  <h1>JavaScript Project Count: {{ javascriptProjects }}</h1>
-  <h1 v-for="language in languages">{{ language }}</h1>
+<div class="statsWrapper">
+    <div class="statsGrid">
+        <h4>JavaScript Project Count: {{ javascriptProjects }}</h4>
+        <h4>Current Projects Count: {{projects.length}}</h4>
+        <h3 v-for="project in projects">{{project.name}}</h3>
+    </div>
+  </div>
+ 
 </template>
 
 <script>
@@ -19,6 +23,7 @@ export default {
   },
   computed: {
     javascriptProjects() {
+      console.log(this.projects)
       const project = this.projects.filter(
         (project) => project.language === "JavaScript"
       );
@@ -31,3 +36,12 @@ export default {
   },
 };
 </script>
+<style>
+.statsWrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-auto-flow: column;
+  min-height: 100vh
+}
+
+</style>

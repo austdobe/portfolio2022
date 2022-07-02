@@ -1,33 +1,30 @@
 <script setup>
-import FeaturedItems from "../components/FeaturedItems.vue";
 import appData from "../store/featuredApps.json";
-import HeroImage from "../components/HeroImage.vue";
 import FeaturedSection from "../components/FeaturedSection.vue";
+import ContactMeBanner from "../components/contactMeBanner.vue";
+import HeroImage from "../components/HeroImage.vue";
 </script>
 
 <template>
-<HeroImage :images="renderImages" :app="imageData" />
-<FeaturedSection :apps="apps" id=featured />
-<!-- <div id="featured">
-  <h1 class="featuredHeader">Featured Applications</h1>
-  <div class="featuredGrid">
-    <FeaturedItems
-      v-for="app in apps"
-      :image="app.image"
-      :heading="app.heading"
-      :description="app.description"
-      :redirect="app.redirect"
-    />
-  </div>
-</div> -->
+  <section>
+    <HeroImage />
+  </section>
+  <section>
+    <ContactMeBanner title="Contact me" description="Whether you have a great idea and need some help building it, or, you have some questions about some of my work, better yet, you want to work with me. Let's talk!" />
+  </section>
+  <section id=featured>
+    <FeaturedSection :apps="apps"  />
+  </section>
+  
 </template>
+
 <script>
 export default {
   data() {
     return {
       apps: appData.apps,
       showMore: false,
-      imageData: []
+      imageData: [],
     };
   },
   computed: {
@@ -60,7 +57,7 @@ export default {
 
 <style>
 #featured {
-  background: linear-gradient(165.6deg, #191919 5%, #d9d2d2 70%, #191919 );;
+  /* background: linear-gradient(165.6deg, #191919 5%, #d9d2d2 70% );; */
   color: White;
 }
 .featuredHeader {
@@ -71,7 +68,7 @@ export default {
   padding: 10px 20px;
 }
 .featuredGrid {
-  min-height: 100vh;
+  min-height: calc(100vh - var(--nav-height));
   display: grid;
   grid-template-columns: 1fr 1fr 1fr ;
   gap: 10px;

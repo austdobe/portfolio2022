@@ -2,7 +2,7 @@
 import { RouterView } from "vue-router";
 import NavBar from "./components/NavBar.vue";
 import FootBar from "./components/FootBar.vue";
-import { getAllRepos } from "./hooks/getGithubStats";
+import { getAllRepos, getStatsRepos } from "./hooks/getGithubStats";
 </script>
 
 <template>
@@ -16,6 +16,7 @@ import { getAllRepos } from "./hooks/getGithubStats";
 export default {
   created() {
     getAllRepos();
+    getStatsRepos();
   },
 };
 </script>

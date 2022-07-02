@@ -6,6 +6,7 @@ import ExperienceCard from "../components/ExperienceCard.vue";
 
 import profileData from "../store/profileData.json";
 import SkillCards from "../components/SkillCards.vue";
+import ContactMeBanner from "../components/contactMeBanner.vue";
 </script>
 
 <template>
@@ -17,9 +18,13 @@ import SkillCards from "../components/SkillCards.vue";
   <section>
     <HeroNoImage msg="I BUILD FULL STACK DIGITAL ASSETS" />
   </section>
+  <section id="contact">
+    <ContactMeBanner title="Contact me" description="Have a great idea or want to work on something together?" />
+  </section>
   <section>
     <ProfileSection id="me" :profileData="profile" />
   </section>
+  
   <section class="aboutGrid">
     <ExperienceCard
       @click="openModal(job)"
@@ -33,6 +38,7 @@ import SkillCards from "../components/SkillCards.vue";
   <section>
     <SkillCards :skill="skills" />
   </section>
+  
 </template>
 
 <script>

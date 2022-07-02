@@ -14,7 +14,7 @@ defineProps({
 </script>
 
 <template>
-    <Carousel :autoplay="3000" :wrap-around="true" :pauseAutoplayOnHover="true">
+    <Carousel class="imageCarousel" :autoplay="3000" :wrap-around="true" :pauseAutoplayOnHover="true">
         <Slide v-for="image in renderImages" :key="image">
             <!-- <h3 class="slideOverlay">{{appData}}</h3> -->
             <img class="carouselImages" :src='image' />
@@ -49,13 +49,9 @@ export default {
 </script>
 
 <style scoped>
-.carousel__prev--in-active,
-.carousel__next--in-active {
-  display: none;
-}
 .carouselImages {
-    width: 90%;
-    height: 90%;
+    width: 100%;
+    height: 100%;
     object-position: right;
     right: 0;
     border-radius: 20px;
@@ -69,5 +65,9 @@ export default {
     top: 0;
     vertical-align: middle;
     background: rgba(25,25,25,0.3)
+}
+.carousel__prev,
+.carousel__next {
+  display: none;
 }
 </style>

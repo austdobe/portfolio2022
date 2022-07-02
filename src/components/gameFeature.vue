@@ -1,5 +1,31 @@
+<script setup>
+defineProps({
+    appURL: {
+      type: String,
+      required: true
+    }
+})
+</script>
 <template>
-  <iframe src="https://austindober.com/SuperMario/game.html">
+  <div v-if="!appURL" class="hiddenDiv">Select an option  to demo.</div>
+  <iframe :src="appURL" >
     <p>Your browser doesn't support iframe</p>
   </iframe>
 </template>
+<style>
+  iframe{
+    min-height: 500px;
+    height: 100%;
+    width: 100%;
+    border-radius: 25px;
+    margin: 10px auto;
+    border: 10px solid #191919;
+    padding-bottom: 20px;
+    background: linear-gradient(155deg, rgb(25,25,25));
+  }
+  .hiddenDiv{
+    font-size: 20px;
+    text-align: center;
+  }
+  
+</style>

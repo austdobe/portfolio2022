@@ -27,12 +27,12 @@ const getImageUrl = (image) => {
        
         <img :src="getImageUrl(image)" />
 
-        <router-link class="cardAction" :to="{ path: `/work/${redirect}` }">
+        <div class="cardAction"> 
           <div class="detailHeading">
             <h2>{{ heading }} </h2>
             <p>{{ description }}</p>
           </div>
-        </router-link>
+        </div>
     </div>
   </div>
 </template>
@@ -54,6 +54,7 @@ img {
 
 }
 .cardAction {
+  display: none;
   color: white;
   height: 100%;
   background: linear-gradient(360deg,  rgba(77, 77, 77, .8) 100%, rgba(166, 166, 166, 0.3)60.38%);

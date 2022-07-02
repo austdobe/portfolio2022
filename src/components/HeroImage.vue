@@ -1,41 +1,37 @@
 <script setup>
-import ImageCarousel from "./ImageCarousel.vue";
 
-defineProps({
-    images: {
-        type: Array,
-        required: true
-    },
-    app: {
-        type: Array,
-        required: true,
-    }
-});
 </script>
 
 <template>
     <div class="hero">
-        <ImageCarousel :images="images" :app="app"/>
-        <RouterLink to="/work#featured">
-            <font-awesome-icon
-                class="icon"
-                icon="fa-solid fa-angle-down"
-                size="2x"
-                bounce
-            />
-        </RouterLink>
+        <video class="heroVideo" autoplay loop preload muted>
+            <source src="../assets/video/EditAppDemo.mp4" type="video/mp4">
+        </video>
     </div>
 </template>
 
 <style scoped>
 .hero {
     display: block;
-    height: calc(100vh - var(--nav-height));
     width: 100%;
+    background-color: rgba(25,25,25, 0.5);
+}
+.heroVideo{
+    width: 100%;
+    height:calc(100vh - var(--nav-height));
+    object-position: center;
+    z-index: -1;
 }
 .icon {
   color: white;
   position: absolute;
+  bottom: 0;
+  left: 0;
   bottom: var(--nav-height);
+}
+.workCarousel {
+    position: absolute;
+    right: 0;
+    width: 60%;
 }
 </style>

@@ -52,7 +52,7 @@ export default {
   grid-template-columns: auto;
   grid-auto-flow: column;
   width: 90%;
-  margin: 0 auto;
+  margin: 100px auto;
 }
 .icon {
   display: none;

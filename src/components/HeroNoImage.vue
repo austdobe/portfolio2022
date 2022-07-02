@@ -17,7 +17,7 @@ defineProps({
     <div class="heroDetails">
       <h1>{{ msg }}</h1>
     </div>
-    <RouterLink to="/about#me">
+    <RouterLink to="/about#contact">
       <font-awesome-icon
         class="icon"
         icon="fa-solid fa-angle-down"
