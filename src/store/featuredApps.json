@@ -16,7 +16,7 @@
             ],
             "description": "Rebuilt Super Mario game powered by Kaboom.js",
             "redirect": "SuperMario",
-            "application": "http://austindober.com/SuperMario/game.html",
+            "application": "https://austindober.com/SuperMario/game.html",
             "isFeatured" : true
         },
         {
