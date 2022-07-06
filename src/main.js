@@ -11,8 +11,11 @@ import {
   faCaretDown,
   faCaretRight,
   faCircleXmark,
+  faEnvelope,
+  faMessage,
   faToggleOff,
   faToggleOn,
+  faUser,
   faUserSecret,
 } from "@fortawesome/free-solid-svg-icons";
 import {
@@ -34,7 +37,11 @@ library.add(
   faBars,
   faToggleOff,
   faToggleOn,
-  faCircleXmark
+  faCircleXmark,
+  faEnvelope,
+  faMessage,
+  faUser
+
 );
 
 createApp(App)

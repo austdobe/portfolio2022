@@ -19,14 +19,14 @@ import { RouterLink } from "vue-router";
         <a href="https://github.com/austdobe" target="_blank">
           <font-awesome-icon icon="fa-brands fa-github-square" size="2x" />
         </a>
-      </div>
+    </div>
   </div>
 </template>
 
 <style scoped>
 .wrapper {
   width: 100%;
-  height: 300px;
+  height: var(--footer-height);
   font-size: 12px;
   margin: 0 auto;
   text-align: center;

@@ -40,6 +40,9 @@ export const routes = [
     path: "/contact",
     name: "Contact",
     component: () => import("../views/ContactView.vue"),
+    meta: {
+      hideNavbar: true,
+    },
   },
   {
     path: "/404",

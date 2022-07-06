@@ -14,12 +14,14 @@
 .hero {
     display: block;
     width: 100%;
-    background-color: rgba(25,25,25, 0.5);
+    background: rgba(25,25,25, .3);
 }
 .heroVideo{
-    width: 100%;
-    height:calc(100vh - var(--nav-height));
-    object-position: center;
+    min-width: 100%;
+    min-height:calc(100vh - var(--nav-height));
+    border-radius: 20px;
+    height: auto;
+    width: auto;
     z-index: -1;
 }
 .icon {

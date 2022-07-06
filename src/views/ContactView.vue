@@ -1,3 +1,31 @@
+<script setup>
+import ContactMeForm from '../components/ContactMeForm.vue';
+import ContactCard from '../components/ContactCard.vue';
+
+</script>
+
 <template>
-    
+    <section class="contactGrid">
+        <ContactCard />
+        <ContactMeForm />
+    </section>
 </template>
+
+<style>
+.contactGrid{
+    background: linear-gradient(90deg, #181818 36.2%, rgba(24, 24, 24, 0) 112.3%), url("../assets/images/secondForest.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    min-height: 100vh;
+}
+@media (max-width: 768px) {
+    .contactGrid{
+        display:block;
+    }
+}
+
+</style>

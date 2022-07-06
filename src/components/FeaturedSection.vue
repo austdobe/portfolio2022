@@ -21,7 +21,11 @@ defineProps({
             :redirect="app.redirect"
         />
     </div>
-    <GameFeature class="gameFeature" :appURL="iFrameData"></GameFeature>
+    <GameFeature class="gameFeature" :appURL="iFrameData" :screenSize="mobile"></GameFeature>
+    <ul class="featuredDropdown">
+        <li class="dropdownItem">Mobile</li>
+        <li class="dropdownItem">Desktop</li>
+    </ul>
 </template>
 
 <script>
@@ -49,6 +53,9 @@ export default {
     align-items: center;
     justify-items: center;
     width: 100%;
+}
+.dropdownItem{
+    list-style: none;
 }
 .gameFeature{
     grid-row-start: 2;

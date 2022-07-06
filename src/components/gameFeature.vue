@@ -3,12 +3,17 @@ defineProps({
     appURL: {
       type: String,
       required: true
+    },
+    screenSize: {
+      type: String,
+      required: true
     }
+    
 })
 </script>
 <template>
   <div v-if="!appURL" class="hiddenDiv">Select an option  to demo.</div>
-  <iframe :src="appURL" >
+  <iframe :src="appURL" :class="screenSize = 'mobile' ? 'mobileFrame' : ''">
     <p>Your browser doesn't support iframe</p>
   </iframe>
 </template>
@@ -26,6 +31,11 @@ defineProps({
   .hiddenDiv{
     font-size: 20px;
     text-align: center;
+  }
+  .mobileFrame{
+    height: 100%;
+    width: 412px;
+    object-position: center;
   }
   
 </style>
