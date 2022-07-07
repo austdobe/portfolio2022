@@ -6,42 +6,43 @@ import emailjs from '@emailjs/browser'
     <form  ref= 'form' @submit.prevent="submit">
         <div class="contactInputWrapper">
             <font-awesome-icon icon="fa-solid fa-user" size="2x" />
-            <input name="firstName" v-model="firstName" placeholder="First Name">
+            <input name="firstName" placeholder="First Name">
 
-            <input v-model="lastName" name="lastName" placeholder="Last Name">
+            <input name="lastName" placeholder="Last Name">
         </div>
         <div class="contactInputWrapper">
             <font-awesome-icon icon="fa-solid fa-envelope" size="2x" />
-            <input v-model="email" name="email" placeholder="Email Address">
+            <input name="email" placeholder="Email Address">
         </div>
         <div class="contactInputWrapper">
             <font-awesome-icon icon="fa-solid fa-message" size="2x" />
-            <textarea v-model="message" name="message" placeholder="Brief description"></textarea>
+            <textarea name="message" placeholder="Brief description"></textarea>
         </div>
 
         <button type="submit">Submit</button>
         
     </form>
+    <div v-if="success" class="successBanner">
+        <h3>Thank you for the message, I will get back to you shortly!</h3>
+    </div>
 </template>
 <script>
 
 export default {
     data() {
         return {
-            firstName: '',
-            lastName: '',
-            email: '',
-            message: ''
+            success: false
         }
     },
     computed: {
         formValid() {
-            const { firstName, lastName, email, message } = this;
+            const { firstName, lastName, email, message } = this.$refs.form;
+            console.log(firstName)
             return (
-                firstName.length > 0 &&
-                lastName.length > 0 &&
-                /(.+)@(.+){2,}.(.+){2,}/.test(email) &&
-                message.length > 0
+                firstName.value.length > 0 &&
+                lastName.value.length > 0 &&
+                /(.+)@(.+){2,}.(.+){2,}/.test(email.value) &&
+                message.value.length > 0
             );
         }
     },
@@ -50,20 +51,16 @@ export default {
             if(!this.formValid) {
                 return
             }
-            const { firstName, lastName, email, message } = this;
-            const payload = {
-                firstName,
-                lastName,
-                email,
-                message,
-            };
-            console.log(payload)
             emailjs.sendForm('service_0gnmgyv', 'template_le0qo86', this.$refs.form, '2ERP7h4QBhLL7GNsn')
-            .then((result) => {
-                console.log('SUCCESS!', result.text);
+            .then(() => {
+                this.success = true;
             }, (error) => {
                 console.log('FAILED...', error.text);
-            });
+            }).finally (() => {
+                this.$refs.form.reset()
+                setTimeout(() => this.success = false, 3000)
+
+            })
         },
     }
 }
@@ -108,6 +105,19 @@ button{
 }
 button:hover{
     background-color:#333131;
+}
+.successBanner {
+    position: absolute;
+    bottom: 50px;
+    right: 0;
+    left: 0;
+    border: greenyellow solid 2px;
+    border-radius: 10px;
+    width: 50%;
+    margin: 10px auto;
+    padding: 5px 10px;
+    font-size: 14px;
+    color: white;
 }
 
 </style>
