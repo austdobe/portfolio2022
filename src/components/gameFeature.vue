@@ -21,7 +21,7 @@ defineProps({
 <style>
   iframe{
     min-height: 500px;
-    max-width: 100vw;
+    max-width: 90vw;
     height: 100%;
     width: 100%;
     border-radius: 25px;
@@ -36,7 +36,7 @@ defineProps({
   }
   .mobileFrame{
     height: 100%;
-    max-width: 100vw;
+    max-width: 90vw;
     width: 412px;
     object-position: center;
   }

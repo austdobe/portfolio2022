@@ -13,13 +13,17 @@
 <style scoped>
 .hero {
     display: block;
+    max-width: 90vw;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
     width: 100%;
     background: rgba(25,25,25, .3);
 }
 .heroVideo{
     border-radius: 20px;
-    align-self: center;
-    justify-self: center;
+    max-width: 90vw;
     height: auto;
     width: auto;
     z-index: -1;
