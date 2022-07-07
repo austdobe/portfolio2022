@@ -17,9 +17,9 @@
     background: rgba(25,25,25, .3);
 }
 .heroVideo{
-    min-width: 100%;
-    min-height:calc(100vh - var(--nav-height));
     border-radius: 20px;
+    align-self: center;
+    justify-self: center;
     height: auto;
     width: auto;
     z-index: -1;
@@ -31,9 +31,10 @@
   left: 0;
   bottom: var(--nav-height);
 }
-.workCarousel {
-    position: absolute;
-    right: 0;
-    width: 60%;
+@media (max-width: 768px) {
+    .heroVideo {
+        width: 100%;
+        border-radius: 0;
+    }
 }
 </style>

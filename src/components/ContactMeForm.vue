@@ -23,7 +23,13 @@ import emailjs from '@emailjs/browser'
         
     </form>
     <div v-if="success" class="successBanner">
-        <h3>Thank you for the message, I will get back to you shortly!</h3>
+        <h3>Email has been successfully sent!</h3>
+        <font-awesome-icon
+        @click="toggleSuccess"
+        class="contactMeIcon"
+        icon="fa-solid fa-circle-xmark"
+        size="2x"
+      />
     </div>
 </template>
 <script>
@@ -47,13 +53,16 @@ export default {
         }
     },
     methods: {
+        toggleSuccess() {
+            this.success = !this.success
+        },
         submit() {
             if(!this.formValid) {
                 return
             }
             emailjs.sendForm('service_0gnmgyv', 'template_le0qo86', this.$refs.form, '2ERP7h4QBhLL7GNsn')
             .then(() => {
-                this.success = true;
+                this.toggleSuccess()
             }, (error) => {
                 console.log('FAILED...', error.text);
             }).finally (() => {
@@ -108,16 +117,23 @@ button:hover{
 }
 .successBanner {
     position: absolute;
-    bottom: 50px;
+    bottom: 0;
     right: 0;
     left: 0;
-    border: greenyellow solid 2px;
+    border: greenyellow solid 1px;
     border-radius: 10px;
-    width: 50%;
+    background-color: gray;
+    width: 100%;
     margin: 10px auto;
     padding: 5px 10px;
     font-size: 14px;
     color: white;
+}
+.contactMeIcon {
+    position: absolute;
+    left: 0;
+    top:5px;
+    cursor: pointer;
 }
 
 </style>

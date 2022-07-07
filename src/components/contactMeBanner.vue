@@ -62,4 +62,15 @@
     background-color: #191919;
 }
 
+@media (max-width: 768px) {
+    .banner{
+        display: block;
+        height: fit-content;
+    }
+    .bannerHeader{
+        margin-bottom: 20px;
+        width: 90%
+    }
+}
+
 </style>

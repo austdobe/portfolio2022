@@ -22,7 +22,7 @@ import NavBar from '../components/NavBar.vue';
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
-    min-height: 100vh;
+    min-height: calc(100vh - var(--nav-height));
 }
 .contactNav {
     position: absolute;

@@ -82,9 +82,8 @@ export default {
 }
 @media (max-width: 768px) {
     .featuredWrapper {
-        display: block;
-        align-items: center;
-        justify-items: center;
+        display: flex;
+        flex-wrap: wrap;
     }
 }
 </style>

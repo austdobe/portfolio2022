@@ -5,17 +5,21 @@ import { RouterLink } from "vue-router";
   <nav class="wrapper">
     <div class="icon" @click="handleToggle">
       <font-awesome-icon v-if="!isShown" icon="fa-solid fa-bars" size="2x" />
-      <font-awesome-icon
-        v-if="isShown"
-        icon="fa-solid fa-circle-xmark"
-        size="2x"
-      />
+      
       <div>
         <div v-if="isShown" class="mobileNavItems">
-          <RouterLink class="title" to="/">@Austin Dober</RouterLink>
-          <RouterLink to="/about">About</RouterLink>
-          <RouterLink to="/work">Work</RouterLink>
-          <RouterLink to="/contact">Contact</RouterLink>
+            <font-awesome-icon
+            v-if="isShown"
+            class="mobileNavIcon"
+            icon="fa-solid fa-circle-xmark"
+            size="2x"
+          />
+          <div class="mobileNavLinks">
+            <RouterLink class="title" to="/">@Austin Dober</RouterLink>
+            <RouterLink to="/about">About</RouterLink>
+            <RouterLink to="/work">Work</RouterLink>
+            <RouterLink to="/contact">Contact</RouterLink>
+          </div>
         </div>
       </div>
     </div>
@@ -120,6 +124,41 @@ nav a:first-of-type {
     width: 100%;
     border: none;
     text-align: center;
+  }
+  .mobileNavIcon {
+    position: absolute;
+    left: 30px;
+    top: 30px;
+  }
+  .mobileNavLinks{
+    margin-top: 200px;
+    width: 100%;
+    height: 100%;
+    display: block;
+    text-align: center;
+  }
+  .mobileNavItems a {
+    width: 100%;
+    padding: 10px 20px;
+    align-self: center;
+    justify-self: center;
+    margin: 0 auto;
+    color: white;
+  }
+  .mobileNavItems a:hover {
+    background-color: darkgray;
+  }
+  .mobileNavItems {
+    position: fixed;
+    background-color: gray;
+    align-items: center;
+    justify-items: center;
+    right: 0;
+    top:0;
+    width: 100vw;
+    height: 100vh;
+    transition: 0.5s;
+    z-index: 99;
   }
 }
 </style>

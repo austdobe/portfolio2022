@@ -98,11 +98,4 @@ export default {
     margin-right: auto;
   }
 }
-@media screen and (max-width: 500px) {
-  .grid {
-    grid-template-columns: 1fr;
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
 </style>
