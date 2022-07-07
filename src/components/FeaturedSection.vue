@@ -84,6 +84,10 @@ export default {
     .featuredWrapper {
         display: flex;
         flex-wrap: wrap;
+        align-items: center;
+        align-content: center;
+        justify-items: center;
+        justify-content: center;
     }
 }
 </style>
