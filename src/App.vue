@@ -12,14 +12,6 @@ import { getAllRepos, getStatsRepos } from "./hooks/getGithubStats";
 
   <FootBar v-if="!$route.meta.hideNavbar" />
 </template>
-<script>
-export default {
-  created() {
-    getAllRepos();
-    getStatsRepos();
-  },
-};
-</script>
 
 <style>
 @import "@/assets/base.css";

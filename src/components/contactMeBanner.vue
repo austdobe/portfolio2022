@@ -15,11 +15,10 @@
 <template>
     <div class="banner">
         <div class="bannerHeader">
-            <!-- <h1 class="bannerTitle">{{title}}</h1> -->
             <h3 class="bannerDescription">{{description}}</h3>
         </div>
         <div class="contactBannerActionWrapper">
-            <a target="_blank" class="contactBannerAction" href="mailto: austin.dober@gmail.com"> Contact me</a>
+            <RouterLink class="contactBannerAction" to="./contact"> Contact me</RouterLink>
         </div>
     </div>
 

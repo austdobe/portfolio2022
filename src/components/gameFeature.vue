@@ -8,12 +8,13 @@ defineProps({
       type: String,
       required: true
     }
-    
 })
+
+
 </script>
 <template>
   <div v-if="!appURL" class="hiddenDiv">Select an option  to demo.</div>
-  <iframe :src="appURL" :class="screenSize = 'mobile' ? 'mobileFrame' : ''">
+  <iframe :src="appURL" :class="screenSize === 'desktop' ? '' : 'mobileFrame'">
     <p>Your browser doesn't support iframe</p>
   </iframe>
 </template>

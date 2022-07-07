@@ -1,10 +1,12 @@
 <script setup>
 import ContactMeForm from '../components/ContactMeForm.vue';
 import ContactCard from '../components/ContactCard.vue';
+import NavBar from '../components/NavBar.vue';
 
 </script>
 
 <template>
+    <NavBar class="contactNav" />
     <section class="contactGrid">
         <ContactCard />
         <ContactMeForm />
@@ -22,9 +24,16 @@ import ContactCard from '../components/ContactCard.vue';
     align-items: center;
     min-height: 100vh;
 }
+.contactNav {
+    position: absolute;
+    top: 0;
+    z-index:1;
+}
 @media (max-width: 768px) {
     .contactGrid{
         display:block;
+        background: linear-gradient(180deg, #181818 -36.2%, rgba(24, 24, 24, 0) 152.3%), url("../assets/images/secondForest.jpg");
+        color: white;
     }
 }
 

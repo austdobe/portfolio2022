@@ -17,7 +17,7 @@ defineProps({
         clean UX/UI. Feel free to look around and get to
         <RouterLink to="/about">know me</RouterLink>. If you have any questions,
         or would like to work together,
-        <a target="_blank" href="mailto: austin.dober@gmail.com">contact</a> me
+        <RouterLink to="/contact">contact</RouterLink> me
         directly.
         <div class="links">
           <a href="https://linkedin.com/in/austin-dober" target="_blank">

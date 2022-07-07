@@ -21,11 +21,13 @@ defineProps({
             :redirect="app.redirect"
         />
     </div>
-    <GameFeature class="gameFeature" :appURL="iFrameData" :screenSize="mobile"></GameFeature>
-    <ul class="featuredDropdown">
-        <li class="dropdownItem">Mobile</li>
-        <li class="dropdownItem">Desktop</li>
-    </ul>
+    <div class="featuredDropdown">
+        <font-awesome-icon  icon="fa-solid fa-caret-down" />
+        <button class="dropdownItem" @click="toggleScreen('mobile')">Mobile</button>
+        <button class="dropdownItem" @click="toggleScreen('desktop')">Desktop</button>
+    </div>
+    <GameFeature class="gameFeature" :appURL="iFrameData" :screenSize="screenSize"></GameFeature>
+    
 </template>
 
 <script>
@@ -33,13 +35,17 @@ import FeaturedItems from './FeaturedItems.vue'
 export default {
     data(){
         return {
-            iFrameData: ''
+            iFrameData: '',
+            screenSize: 'Desktop'
         }
     },
     methods: {
         handleIFrame(job) { 
             this.iFrameData = job.application 
 
+        },
+        toggleScreen(value) {
+            this.screenSize = value
         }
     }
 }
@@ -54,7 +60,21 @@ export default {
     justify-items: center;
     width: 100%;
 }
+.featuredDropdown {
+    width: 50px;
+    height: 30px;
+    border-radius: 20px;
+    z-index: 1;
+}
+.featuredDropdown:hover .dropdownItem{
+    display: block;
+    color: white;
+    position: relative;
+    background-color: gray;
+}
 .dropdownItem{
+    display: none;
+    border-radius: 10px;
     list-style: none;
 }
 .gameFeature{
